@@ -87,7 +87,7 @@ fig_a <- ggplot(pred_re, aes(x = agegr, y = fitted)) +
   scale_fill_manual(labels = c("Native","Immigrant"), values = Set1[2:1]) +
   labs(x = "Age", y = "", colour = NULL, fill = NULL, tag = "a",
        title = "Predicted number of\nchronic diseases") +
-  theme_bw(base_family = "Arial") + theme +
+  theme_bw(base_family = "Arial") +
   scale_x_continuous(breaks = 1:6, labels = lab, minor_breaks = NULL)
 
 ## differential
@@ -101,7 +101,7 @@ fig_b <- ggplot(diff_re, aes(x = as.numeric(as.factor(agegr)), y = diff)) +
   scale_linetype_manual(values = c("21","solid")) +
   labs(x = "Age", y = "",colour = NULL, linetype = NULL, tag = "b",
        title = "Immigrant-native\ndifferential") +
-  theme_bw(base_family = "Arial") + theme +
+  theme_bw(base_family = "Arial") + 
   scale_x_continuous(b = 1:6, lab = lab, minor_breaks = NULL, limits = c(1, 6))
 
 
