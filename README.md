@@ -5,12 +5,12 @@ In this paper, we use data from the Survey of Health, Ageing and Retirement in E
 
 The provided code also includes supplementary analyses on the following:
 
-	(1) random-effects models
- 	(2) stratified analysis by age at migration
-  	(3) models including health behaviour characteristics
-   	(4) models using the redefined outcome measure where we combine cardiovascular diseases and diabetes into one condition
-    	(5) analysis including the missing observations
-	(6) analysis including the inverse probability weights to check for the attrition bias. 
+     (1) random-effects model
+     (2) stratified analysis by age at migration
+     (3) models including health behaviour characteristics
+     (4) models using the redefined outcome measure where we combine cardiovascular diseases and diabetes into one condition
+     (5) analysis including the missing observations
+     (6) analysis including the inverse probability weights to check for the attrition bias. 
 
 You can access the SHARE data from their website (https://share-eric.eu/data/).
 
