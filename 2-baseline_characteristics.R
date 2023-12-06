@@ -3,7 +3,6 @@
 
 library(tableone)
 library(dummy)
-library(openxlsx)
 library(ggplot2)
 library(extrafont)
 library(dplyr)
@@ -12,7 +11,7 @@ library(tidyverse)
 
 # bring data --------------------------------------------------------------
 
-data <- read.csv("data/dataframe/w8/1. main/baseline.csv", header = T)
+data <- read.csv("mypath/baseline.csv", header = T)
 
 
 # format data -------------------------------------------------------------
@@ -86,14 +85,6 @@ table$Nat_p[table$Nat_p=="(0.0)"] <- ""
 rm(t1,t2,split,cond)
 
 table
-
-## save
-
-wb <- loadWorkbook("table/Tables.xlsx")
-addWorksheet(wb, sheetName = "T1")
-writeData(wb, "T1", table, startRow=2, startCol=2)
-saveWorkbook(wb, "table/Tables.xlsx", overwrite = TRUE)
-rm(wb)
 
 
 # figure table 1 ----------------------------------------------------------
@@ -282,19 +273,3 @@ fig4 <- ggplot(figtab4, aes(x = agegr, y = percentage, fill = ndisease)) +
                      lab=scales::percent, expand=c(0.05,0)) +
   guides(fill = guide_legend(nrow = 1))
 
-
-# save --------------------------------------------------------------------
-
-ggsave <- ggplot2::ggsave; body(ggsave) <- body(ggplot2::ggsave)[-2]
-
-ggsave(plot = fig1, width = 8.4/cm(1), height = 6.0/cm(1), dpi = 500, 
-       filename = "plot/w8/1. Baseline/plot1.png")
-
-ggsave(plot = fig2, width = 8.4/cm(1), height = 8.2/cm(1), dpi = 500, 
-       filename = "plot/w8/1. Baseline/plot2.png")
-
-ggsave(plot = fig3, width = 8.4/cm(1), height = 14.2/cm(1), dpi = 500,
-       filename = "plot/w8/1. Baseline/plot3.png")
-
-ggsave(plot = fig4, width = 11.7/cm(1), height = 8.2/cm(1), dpi = 500,
-       filename = "plot/w8/1. Baseline/plot4.png")
