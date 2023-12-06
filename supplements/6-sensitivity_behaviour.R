@@ -191,14 +191,14 @@ fig <- grid.arrange(arrangeGrob(
   
   arrangeGrob( # prediction
     arrangeGrob(figa, figb, figc, ncol = 3, widths = c(1.0, 1.0, 1.0)),
-    top=textGrob("Chronic disease development", 
+    top = textGrob("Chronic disease development", 
                  gp = gpar(fontsize = 8, 
                            fontfamily = "Arial", 
                            fontface = "bold"))),
   
   arrangeGrob( # differential
     arrangeGrob(figd, fige, figf, ncol = 3, widths = c(1.0, 1.0, 1.0)),
-    top=textGrob("Immigrant-native differential", 
+    top = textGrob("Immigrant-native differential", 
                  gp = gpar(fontsize = 8, 
                            fontfamily = "Arial", 
                            fontface = "bold"))),
