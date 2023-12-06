@@ -2,7 +2,6 @@
 # packages ----------------------------------------------------------------
 
 library(plm)
-library(texreg)
 library(RColorBrewer)
 library(ggplot2)
 library(extrafont)
