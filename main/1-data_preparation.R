@@ -1,11 +1,15 @@
 
 # path --------------------------------------------------------------------
 
-## create "data" folder in your project
-## under the "data" folder, create 8 wave-specific folders and name them "wave1"-"wave8"
-## and also create 7 wave-specific imputation folders (except for wave 3) named "imputation1"-"imputation8"
-## in the wave-specific folders (e.g., "data/wave1"), put raw data files for that wave
-## in the wave-specific imputation folders (e.g., "data/imputation1"), put raw data for "gv_imputation"
+## 1. create "data" folder in your project
+## 2. under the "data" folder, create 8 wave-specific folders  
+##    and name them "wave1"-"wave8"
+## 3. under the "data" folder, create 7 wave-specific imputation folders 
+##    and name them "imputation1"-"imputation8"
+## 4. in the wave-specific folders (e.g., "data/wave1"), 
+##    put raw data files for that wave
+## 5. in the wave-specific imputation folders (e.g., "data/imputation1"), 
+##    put raw data file of "gv_imputation"
 
 path1 <- paste0("data/wave", c(1:8))
 path2 <- paste0("data/imputations", c(1:2, 4:8))
