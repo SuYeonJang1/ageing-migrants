@@ -109,6 +109,8 @@ fig_b <- ggplot(diff_re, aes(x = as.numeric(as.factor(agegr)), y = diff)) +
 
 fig <- grid.arrange( # random effects
   arrangeGrob(fig_a, fig_b, ncol = 2, widths = c(1.0, 1.0)),
-  top=textGrob("Random-effects", gp = gpar(
-    fontsize = 8, fontfamily = "Arial", fontface = "bold")))
+  top = textGrob("Random-effects", 
+               gp = gpar(fontsize = 8, 
+                         fontfamily = "Arial",
+                         fontface = "bold")))
 
