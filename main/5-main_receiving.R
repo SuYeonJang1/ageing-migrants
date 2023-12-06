@@ -9,6 +9,7 @@ library(grid)
 library(gridExtra)
 library(gtable)
 
+
 # bring data --------------------------------------------------------------
 
 data <- read.csv("mypath/main.csv", header = T)
