@@ -66,6 +66,8 @@ mfe3 <- plm(ndisease ~ agegr * imm + income + employed + marry,
 source("function/pfitted.R")
 source("function/pdiff.R")
 
+lab <- c(paste0(seq(50,75,5),"-",seq(54,79,5)))
+
 l1 <- levels(p1$agegr)
 l2 <- levels(p1$imm)
 
