@@ -1,8 +1,14 @@
 
 # path --------------------------------------------------------------------
 
+## create "data" folder in your project
+## under the "data" folder, create 8 wave-specific folders and name them "wave1"-"wave8"
+## and also create 7 wave-specific imputation folders (except for wave 3) named "imputation1"-"imputation8"
+## in the wave-specific folders (e.g., "data/wave1"), put raw data files for that wave
+## in the wave-specific imputation folders (e.g., "data/imputation1"), put raw data for "gv_imputation"
+
 path1 <- paste0("data/wave", c(1:8))
-path2 <- paste0("data/imputations", c(1:2,4:8))
+path2 <- paste0("data/imputations", c(1:2, 4:8))
 
 
 # bring data --------------------------------------------------------------
@@ -20,16 +26,16 @@ v2 <- c("mergeid", "country", "implicat", "thinc")
 
 wave_Table <- function(path, variable){
   require(haven, quietly = TRUE)
-  list <- lapply(path, function(x)paste0(x, "/", list.files(x)))
-  wave <- lapply(list, function(x)lapply(x, function(y) 
-    read_sav(y, col_select=any_of(variable))))
+  list <- lapply(path, function(x) paste0(x, "/", list.files(x)))
+  wave <- lapply(list, function(x) lapply(x, function(y) 
+    read_sav(y, col_select = any_of(variable))))
   wave.merge <- lapply(wave, function(z){
     res <- Reduce(function(x,y) merge(x, y, all=TRUE), z)})
   return(wave.merge)
 }
 
 share <- wave_Table(path1,v1)
-share <- mapply(cbind, share, "wave"=c(1:8), SIMPLIFY=FALSE)
+share <- mapply(cbind, share, "wave" = c(1:8), SIMPLIFY=FALSE)
 share <- lapply(share, function(x){
   data <- data.frame(
     sapply(x, function(d){
@@ -51,7 +57,7 @@ share_hhsize <- lapply(share[c(1:2,4:8)], function(x){
   data <- x
   data[c("mergeid","hhsize")]})
 share_imp <- lapply(1:7, function(x){
-  merge(share_imp[[x]], share_hhsize[[x]], by="mergeid", all.x=TRUE)})
+  merge(share_imp[[x]], share_hhsize[[x]], by = "mergeid", all.x = TRUE)})
 
 share_imp <- lapply(share_imp, function(x){
   data <- data.frame(
@@ -64,8 +70,8 @@ share_imp <- lapply(share_imp, function(x){
     inc <- sub$thinc/sqrt(sub$hhsize)
     }))
   income <- rowSums(income)/5
-  data <- data[data$implicat==1, c("mergeid","wave","country")]
-  data <- cbind(data, thinc=income)
+  data <- data[data$implicat == 1, c("mergeid","wave","country")]
+  data <- cbind(data, thinc = income)
   row.names(data) <- NULL
   incomedat <- lapply(unique(data$country), function(c){
     codat <- data[data$country == c, ]
