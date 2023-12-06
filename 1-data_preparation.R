@@ -482,7 +482,7 @@ rm(dat1,dat2,id)
 
 # export ------------------------------------------------------------------
 
-write.csv(base, "data/dataframe/w8/1. main/baseline.csv", row.names = F)
-write.csv(main, "data/dataframe/w8/1. main/main.csv", row.names = F)
-write.csv(exclusion, "data/dataframe/w8/1. main/exclusion.csv", row.names = F)
+write.csv(base, "mypath/baseline.csv", row.names = F)
+write.csv(main, "mypath/main.csv", row.names = F)
+write.csv(exclusion, "mypath/exclusion.csv", row.names = F)
 
