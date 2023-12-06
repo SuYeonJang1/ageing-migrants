@@ -15,7 +15,7 @@ library(gtable)
 data <- read.csv("mypath/main.csv", header = T)
 
 
-# factor ------------------------------------------------------------------
+# variables ---------------------------------------------------------------
 
 data$agegr <- cut(data$age, c(seq(50,75,5), Inf), right = F)
 data$agegr <- factor(data$agegr)
@@ -26,6 +26,7 @@ data$income <- factor(data$income, levels = 1:3)
 data$employed <- factor(data$employed, levels = 0:1)
 data$marry <- factor(data$marry, levels = 0:1)
 data$ndisease <- data$ncond1
+head(data)
 
 
 # FE data -----------------------------------------------------------------
