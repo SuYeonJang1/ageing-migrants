@@ -3,13 +3,13 @@ Code for the paper "Healthy immigrants, unhealthy ageing? Analysis of health dec
 
 In this paper, we use data from the Survey of Health, Ageing and Retirement in Europe (SHARE) and employ fixed-effects regression models to account for the unobserved heterogeneity related to individual characteristics, including migration background. 
 
-The provided code also includes supplementary analyses on:
+The provided code also includes supplementary analyses on the following:
 
-	(1) random-effects models;
- 	(2) stratified analysis by age at migration;
-  	(3) models including health behaviour characteristics;
-   	(4) models using the redefined outcome measure where we combine cardiovascular diseases and diabetes into one condition;
-    	(5) analysis including the missing observations; AND
+	(1) random-effects models
+ 	(2) stratified analysis by age at migration
+  	(3) models including health behaviour characteristics
+   	(4) models using the redefined outcome measure where we combine cardiovascular diseases and diabetes into one condition
+    	(5) analysis including the missing observations
 	(6) analysis including the inverse probability weights to check for the attrition bias. 
 
 You can access the SHARE data from their website (https://share-eric.eu/data/).
