@@ -3,13 +3,12 @@
 
 library(plm)
 library(texreg)
-library(openxlsx)
+library(RColorBrewer)
 library(ggplot2)
 library(extrafont)
 library(grid)
 library(gridExtra)
 library(gtable)
-library(RColorBrewer)
 
 
 # bring data --------------------------------------------------------------
