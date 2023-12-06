@@ -199,7 +199,7 @@ fig1 <- ggplot(figtab1, aes(x = agegr, y = percentage, fill = ndisease)) +
   theme_bw(base_family = "Arial") + 
   scale_x_continuous(breaks = 1:6, minor_breaks = NULL, lab = level, expand = c(0.05, 0)) +
   scale_y_continuous(breaks = seq(0,1,0.2), minor_breaks = NULL, 
-                     lab=scales::percent, expand = c(0.05,0)) +
+                     lab = scales::percent, expand = c(0.05,0)) +
   guides(fill = guide_legend(nrow = 1))
 
 fig2 <- ggplot(figtab2, aes(x = agegr, y = percentage, fill = ndisease)) + 
@@ -209,7 +209,7 @@ fig2 <- ggplot(figtab2, aes(x = agegr, y = percentage, fill = ndisease)) +
   theme_bw(base_family = "Arial") + 
   scale_x_continuous(breaks = 1:6, minor_breaks = NULL, lab = level, expand = c(0.05, 0)) +
   scale_y_continuous(breaks = seq(0,1,0.2), minor_breaks = NULL, 
-                     lab=scales::percent, expand = c(0.05,0)) +
+                     lab = scales::percent, expand = c(0.05,0)) +
   guides(fill = guide_legend(nrow = 1))
 
 fig3 <- ggplot(figtab3, aes(x = agegr, y = percentage, fill = ndisease)) + 
@@ -219,7 +219,7 @@ fig3 <- ggplot(figtab3, aes(x = agegr, y = percentage, fill = ndisease)) +
   theme_bw(base_family = "Arial") + 
   scale_x_continuous(breaks = 1:6, minor_breaks = NULL, lab = level, expand = c(0.05, 0)) +
   scale_y_continuous(breaks = seq(0,1,0.2), minor_breaks = NULL, 
-                     lab=scales::percent, expand = c(0.05,0)) +
+                     lab = scales::percent, expand = c(0.05,0)) +
   guides(fill = guide_legend(nrow = 1))
 
 fig4 <- ggplot(figtab4, aes(x = agegr, y = percentage, fill = ndisease)) + 
@@ -229,6 +229,6 @@ fig4 <- ggplot(figtab4, aes(x = agegr, y = percentage, fill = ndisease)) +
   theme_bw(base_family = "Arial") + 
   scale_x_continuous(breaks = 1:6, minor_breaks = NULL, lab = level, expand = c(0.05, 0)) +
   scale_y_continuous(breaks = seq(0,1,0.2), minor_breaks = NULL, 
-                     lab=scales::percent, expand = c(0.05,0)) +
+                     lab = scales::percent, expand = c(0.05,0)) +
   guides(fill = guide_legend(nrow = 1))
 
