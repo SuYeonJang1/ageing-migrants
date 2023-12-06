@@ -99,36 +99,10 @@ diff_fe
 
 # figures -----------------------------------------------------------------
 
-## aesthetics
+## colors
 
 Set1 <- brewer.pal(7, "Set1")
 Dark2 <- brewer.pal(7,"Dark2")
-
-theme <- theme(
-  legend.position = "bottom", 
-  legend.box.margin = margin(0,0,0,0),
-  legend.box.spacing = unit(0.1,"cm"),
-  legend.spacing.x = unit(0.08,"cm"),
-  legend.background = element_rect(color = "black", 
-                                   fill = "white",
-                                   linewidth = 0.3),
-  legend.text = element_text(size = 8, color = "black"),
-  legend.key.height = unit(5,"pt"), 
-  legend.key.width = unit(10,"pt"),
-  legend.margin = margin(2,3,2,0,"pt"),
-  panel.grid = element_line(linewidth = 0.3),
-  axis.ticks = element_line(linewidth = 0.3),
-  axis.text.x = element_text(size = 8, colour = "black", 
-                             angle = 30, hjust = 0.8),
-  axis.text.y = element_text(size = 8, colour = "black"),
-  axis.title.x = element_text(
-    size = 8,colour = "black", margin = margin(1.5,0,1,0)),
-  axis.title.y = element_blank(),
-  plot.title = element_text(
-    size = 8,colour = "black", margin = margin(2,0,2,0), hjust = 0.5),
-  plot.tag = element_text(size = 8, colour = "black", face = "bold"),
-  plot.tag.position = c(0.03,0.98),
-  plot.margin = unit(c(5.5,2,0,2),"pt")) 
 
 ## ols
 ### prediction
