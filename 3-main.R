@@ -61,32 +61,6 @@ mfe3 <- plm(ndisease ~ agegr * imm + income + employed + marry,
             data = p2, model = "within")
 
 
-# tables ------------------------------------------------------------------
-
-source("function/tab.R")
-
-lab <- c(paste0(seq(50,75,5),"-",seq(54,79,5)))
-
-varn <- c(
-  "Constant",lab[2:6],"Immigrant(ref:Native)","Woman(ref:Man)",
-  paste0(lab[2:6],"xImm"),"Medium","High","Medium ","High",
-  "Employed(ref:Not working)","Married(ref:Not married)")
-
-grn <- list(
-  "Age group" = 1:5,
-  "Age group x Immigrant status" = 8:12,
-  "Education(ref:Low)" = 13:14,
-  "Income(ref:Low)" = 15:16)
-
-order <- c(2:19, 1)
-
-list <- list(mols1,mols2,mols3,mfe1,mfe2,mfe3)
-
-t1 <- tab(list, varn, grn, order, matrix = FALSE)
-
-t1
-
-
 # prediction --------------------------------------------------------------
 
 source("function/pfitted.R")
